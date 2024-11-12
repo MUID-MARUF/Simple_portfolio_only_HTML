@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Responsive Website</title>
+  <style>
+    /* General styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #e8f5e9; /* Light green background */
+    }
+    /* Header with fade-in animation */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    header {
+      background-color: #2e7d32; /* Darker green */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      animation: fadeIn 2s ease-out; /* Fade-in effect */
+    }
+    header h1 {
+      font-size: 2em;
+    }
+    /* Navigation */
+    nav {
+      background-color: #388e3c; /* Medium green */
+      width: 100%;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+    nav ul li a:hover {
+      background-color: #66bb6a; /* Light green on hover */
+    }
+    /* Main content area */
+    .container {
+      max-width: 1200px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    /* About section */
+    #about {
+      padding: 20px;
+    }
+    /* Contact form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background-color: #43a047; /* Green button */
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+      background-color: #388e3c; /* Dark green on hover */
+    }
+    /* Footer */
+    footer {
+      background-color: #2e7d32; /* Darker green */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      header h1 {
+        font-size: 1.5em;
+      }
+      .container {
+        margin: 10px;
+        padding: 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2em;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      input[type="submit"] {
+        font-size: 0.9em;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Responsive Web</h1>
+    <p>Muid Hasan Maruf & ID: 1237</p>
+  </header>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Main Content Container -->
+  <div class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        My name is Muid Hasan Maruf, a student of Computer Science &
+        Engineering. This is a demonstration of a simple responsive web
+        layout.
+      </p>
+    </section>
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <input type="submit" value="Send Message" />
+      </form>
+    </section>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 My Responsive Web Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>
